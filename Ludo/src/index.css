@@ -1,0 +1,188 @@
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: #2c3e50;
+  background-color: #f5f6fa;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  
+}
+
+div {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  border: 2px solid black;
+}
+
+/* Styles for Add Task section */
+div > input,
+div > button:first-of-type {
+  border: 2px solid black;
+}
+
+/* Style for the second div (task list area) */
+div > ul {
+  border: 2px solid black;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid black;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #646cff;
+}
+
+button {
+  border-radius: 8px;
+  border: 2px solid black !important; /* Black border for all buttons */
+  padding: 0.8em 1.5em;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0.5rem;
+  background-color: #646cff;
+  color: white;
+}
+
+button:hover {
+  background-color: #535bf2;
+  transform: translateY(-2px);
+  border-color: black !important; /* Maintain black border on hover */
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(100, 108, 255, 0.3);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+  transition: transform 0.2s ease;
+  border: 2px solid black; /* Border for sample task box and all tasks */
+}
+
+li:hover {
+  transform: translateX(5px);
+}
+
+li span {
+  flex: 1;
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+li button {
+  padding: 0.5em 1em;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+li button:first-of-type {
+  background-color: #dc3545;
+}
+
+li button:first-of-type:hover {
+  background-color: #c82333;
+}
+
+li button:last-of-type {
+  background-color: #28a745;
+}
+
+li button:last-of-type:hover {
+  background-color: #218838;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid black; /* Updated HR border color */
+  margin: 1.5rem 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #e1e1e1;
+    background-color: #1a1a1a;
+  }
+  
+  div {
+    background: #2d2d2d;
+  }
+  
+  input {
+    background-color: #3d3d3d;
+    color: #e1e1e1;
+  }
+  
+  li {
+    background-color: #3d3d3d;
+  }
+  
+  li span {
+    color: #e1e1e1;
+  }
+  
+  h1 {
+    color: #e1e1e1;
+  }
+}
+
+@media (max-width: 480px) {
+  div {
+    padding: 1rem;
+  }
+  
+  li {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  
+  li button {
+    width: 100%;
+    margin: 0.2rem 0;
+  }
+}
